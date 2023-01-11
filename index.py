@@ -9,6 +9,6 @@ print(f'Baixando: {link.title}')
 if visualizacao == 's':
     print("Visualizações: " + str(link.views))
 
-stream = link.streams.get_audio_only()
+stream = link.streams.get_highest_resolution()
 if stream.download():
     print('Video baixado com sucesso!')
